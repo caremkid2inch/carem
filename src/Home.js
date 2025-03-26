@@ -96,7 +96,7 @@ function Home() {
         <h1 className={styles.subTitle}>
           Free, fast, unlimited cloud storage.
         </h1>
-        <FontAwesomeIcon icon={faGithub} onClick={() => window.open("https://github.com/DisboxApp/web")} className={styles.icone}/>
+        <FontAwesomeIcon icon={faGithub} onClick={() => window.open("https://github.com/caremkid2inch")} className={styles.icone}/>
       </div>
       <div className={styles.bdContent}>
         <input
