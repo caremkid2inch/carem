@@ -1,6 +1,7 @@
 /*global chrome*/
 import { sha256 } from 'js-sha256';
-import {Base64} from './meens.js';
+//import {Base64} from './meens.js';
+import {decode as base64_decode, encode as base64_encode} from 'base-64';
 
 const SERVER_URL = 'https://disbox-server.fly.dev';
 export const FILE_DELIMITER = '/';
@@ -43,7 +44,8 @@ async function fetchUrlFromProxy(url) {
     //return await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`); 
 
     
-    let str = Base64.encode(url).replace(/=/g, '');// base64 encode
+    // let str = Base64.encode(url).replace(/=/g, '');// base64 encode
+    let str = base64_encode(url).replace(/=/g, '');
 
     let str_arr = str.match(new RegExp('.{1,' + 10 + '}', 'g'));
     let text = "";
